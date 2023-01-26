@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="digital-clock">
+      <div class="date">
+        <div class="day">
+          <span id="days"></span>
+          <span>-</span>
+        </div>
+        <!-- day end -->
+        <div class="month">
+          <span id="months" class="one"></span>
+          <span>-</span>
+        </div>
+        <!--month end -->
+        <div class="year">
+          <span id="years" class="one"></span>
+          <span>-</span>
+        </div>
+        <!--year end -->
+        <div class="va">
+          <span id="vars" class="one"></span>
+        </div>
+        <!-- va end -->
+      </div>
+      <!--date end -->
+      <div class="time">
+        <div class="left-side">
+          <span id="hours">00</span>
+        </div>
+        <!-- left-side end -->
+        <div class="right-side">
+          <div class="right-top">
+            <span id="dots">:</span>
+            <span id="minits">00</span>
+          </div>
+          <!-- right-top end -->
+          <div class="right-down">
+            <span id="period">PM</span>
+            <span id="seconds">00</span>
+          </div>
+          <!-- right-down end -->
+        </div>
+        <!-- right-side end -->
+      </div>
+      <!-- time end -->
+    </div>
+    <!-- digital-clock end -->
+  </body>
+  <script>
+    function clock() {
+      var days = document.getElementById("days");
+      var months = document.getElementById("months");
+      var years = document.getElementById("years");
+      var vars = document.getElementById("vars");
+      var hours = document.getElementById("hours");
+      var minits = document.getElementById("minits");
+      var period = document.getElementById("period");
+      var seconds = document.getElementById("seconds");
+
+      var d = new Date().getDate();
+      var mon = new Date().getMonth() + 1;
+      var y = new Date().getFullYear();
+      var v = new Date();
+      var va = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      var vard = va[v.getDay()];
+      var h = new Date().getHours();
+      var m = new Date().getMinutes();
+      var s = new Date().getSeconds();
+
+      var ampm = h >= 12 ? "PM" : "AM";
+
+      if( h > 12){
+        h = h - 12;
+      }
+
+      d = (d < 10 ) ? "0" + d : d;
+      mon = (mon < 10 ) ? "0" + mon : mon;
+      h = (h < 10 ) ? "0" + h : h;
+      m = (m < 10 ) ? "0" + m : m;
+      s = (s < 10 ) ? "0" +  s : s;
+
+      days.innerHTML = d;
+      months.innerHTML = mon;
+      years.innerHTML = y;
+      vars.innerHTML = vard;
+      hours.innerHTML = h;
+      minits.innerHTML = m;
+      period.innerHTML = ampm;
+      seconds.innerHTML = s;
+    }
+    setInterval(clock, 1000);
+
+    // const nodeList = document.querySelectorAll(".one");
+    // for (let i = 0; i < nodeList.length; i++) {
+    //   nodeList[i].style.paddingLeft = "5px";
+    // }
+  </script>
+</html>

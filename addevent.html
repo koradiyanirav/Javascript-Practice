@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AddEventListner</title>
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+      *{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    font-family: cursive;
+}
+
+div#count{
+    margin: 25px auto 0px auto;
+    width: 25%;
+}
+
+div#count h1{
+    display: block;
+    background-color: #203d3a;
+    color: #fff;
+    text-align: center;
+    line-height: 75px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+div#count img{
+    width: 100%;
+    border-radius: 0px 0px 20px 20px;
+    cursor: pointer;
+    height: 350px;
+    filter: grayscale(100%);
+}
+
+div#main, div#main-two{
+    width: 100%;
+    float: left;
+    margin-top: 25px;
+}
+    </style>
+  </head>
+  <body>
+    <div id="count">
+      <div id="main">
+        <h1>Tailest Bilding</h1>
+        <img src="burj.jpg" id="two"/>
+      </div>
+      <div id="main-two">
+        <h1>Enjoy Game</h1>
+        <img src="Chorsh.jpg" id="one"/>
+      </div>
+    </div>
+    <script>
+        // document.getElementsById('one').onmouseover = abc;
+        // function abc() {
+        //     document.getElementById('one').style.filter = 'grayscale(0%)';
+        // };
+
+        // document.getElementsById('one').onmouseout = xyz;
+        // function xyz() {
+        //     document.getElementById('one').style.filter = 'grayscale(100%)';
+        // };
+
+        // document.getElementsById('two').onmouseover = abc;
+        // function abc() {
+        //     document.getElementById('two').style.filter = 'grayscale(0%)';
+        // };
+
+        // document.getElementsById('two').onmouseout = xyz;
+        // function xyz() {
+        //     document.getElementById('two').style.filter = 'grayscale(100%)';
+        // };
+
+        document.getElementById('two').addEventListener( "mouseover", function(){
+            this.style.filter = 'grayscale(0%)';});
+
+            document.getElementById('two').addEventListener( "mouseout", function(){
+            this.style.filter = 'grayscale(100%)';});
+
+        document.getElementById('one').addEventListener( "mouseover", function(){
+            this.style.filter = 'grayscale(0%)';});
+
+            document.getElementById('one').addEventListener( "mouseout", function(){
+            this.style.filter = 'grayscale(100%)';});
+    </script>
+  </body>
+</html>

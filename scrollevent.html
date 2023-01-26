@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Event</title>
+    <style>
+      div#main {
+        font-size: 1.5em;
+        padding: 40px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <h1>Scroll Event</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+        quisquam sequi quas sed assumenda nemo voluptatibus ea excepturi debitis
+        inventore tempora, perferendis cupiditate soluta quaerat? Enim quas
+        quisquam et nulla?
+      </p>
+      <h1>Scroll Event</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+        quisquam sequi quas sed assumenda nemo voluptatibus ea excepturi debitis
+        inventore tempora, perferendis cupiditate soluta quaerat? Enim quas
+        quisquam et nulla?
+      </p>
+      <h1>Scroll Event</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+        quisquam sequi quas sed assumenda nemo voluptatibus ea excepturi debitis
+        inventore tempora, perferendis cupiditate soluta quaerat? Enim quas
+        quisquam et nulla?
+      </p>
+      <h1>Scroll Event</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+        quisquam sequi quas sed assumenda nemo voluptatibus ea excepturi debitis
+        inventore tempora, perferendis cupiditate soluta quaerat? Enim quas
+        quisquam et nulla?
+      </p>
+      <h1>Scroll Event</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+        quisquam sequi quas sed assumenda nemo voluptatibus ea excepturi debitis
+        inventore tempora, perferendis cupiditate soluta quaerat? Enim quas
+        quisquam et nulla?
+      </p>
+      <h1>Scroll Event</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+        quisquam sequi quas sed assumenda nemo voluptatibus ea excepturi debitis
+        inventore tempora, perferendis cupiditate soluta quaerat? Enim quas
+        quisquam et nulla?
+      </p>
+      <h1>Scroll Event</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+        quisquam sequi quas sed assumenda nemo voluptatibus ea excepturi debitis
+        inventore tempora, perferendis cupiditate soluta quaerat? Enim quas
+        quisquam et nulla?
+      </p>
+      <h1>Scroll Event</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+        quisquam sequi quas sed assumenda nemo voluptatibus ea excepturi debitis
+        inventore tempora, perferendis cupiditate soluta quaerat? Enim quas
+        quisquam et nulla?
+      </p>
+    </div>
+    <script>
+
+    //   window.addEventListener("wheel", function (event) {
+    //     if (event.deltaY < 0) {
+    //       console.log("Scrolling UP...");
+    //     } else if (event.deltaY > 0) {
+    //       console.log("Scrolling Down...");
+    //     }
+    //   });
+
+      // window.addEventListener('scroll',function () {
+      //     if (window.pageYOffset < 200) {
+      //         console.log("over Scrolling 200px");
+      //     }else{
+      //         console.log("under Scrolling 200px");
+      //     }
+      // });
+
+      window.addEventListener('scroll',function () {
+          if (window.pageYOffset < 100) {
+              document.body.style.background = "black";
+              document.body.style.color = "red";
+          }else {
+              document.body.style.background = "white";
+              document.body.style.color = "black";
+          }
+      });
+
+      // window.addEventListener('scroll',function() {
+      //     console.log("scrolling...");
+      // });
+    </script>
+  </body>
+</html>

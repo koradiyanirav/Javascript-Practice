@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="date" id="newdate"/>
+    <br/>
+    <br/>
+    <input type="submit" value="Submit" onclick="myFunction()"/>
+    <br/>
+    <br/>
+    <br/>
+    <div id="Newdate"></div>
+  </body>
+  <script>
+    function myFunction() {
+      var a = document.getElementById("newdate").value;
+    var b =  new Date(a);
+    var dob = b.getTime();
+    var c = new Date();
+    var cur = c.getTime();
+    console.log("dob: ", dob);
+    console.log("cur: ", cur);
+    document.getElementById('Newdate').innerHTML = (cur-dob)/(365*24*60*60*1000);
+    }
+
+  </script>
+</html>

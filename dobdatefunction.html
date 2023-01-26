@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+  <body>
+      <h2>
+          Calculate Age from Date of Birth
+    <br/>
+    <br/>
+    </h2>
+    <b> Enter Date of Birth: <input type="date" id="newdate"/></b>
+    <br/>
+    <br/>
+    <input type="submit" value="Submit" onclick="myFunction()"/>
+    <br/>
+    <br/>
+    
+    <div id="Newfullage"></div>
+    <script>
+      function myFunction() {
+        var userinput = document.getElementById("newdate").value;
+        var a = new Date(userinput);
+        // console.log(a);
+        o = a.getTime();
+        // console.log(o);
+        var n = Date.now(a);
+        // console.log(n);
+        q = (n - o);
+        // console.log(q);
+        m = Math.floor(q / 31536000000);
+        // console.log(m);
+        year = q / 31536000000
+        // console.log(year)
+        month = Math.floor((year - m) * 12)
+        // console.log(month) 
+        t = new Date();
+        // console.log(t);
+        f = t.getDate();
+        // console.log(f);
+        v = a.getDate();
+        // console.log(v);
+        b = Math.abs(f - v);
+        // console.log(b)
+        document.getElementById("Newfullage").innerHTML = m + ' year ' + month + ' month ' + b + ' days.';
+      }
+    </script>
+  </body>
+</html>

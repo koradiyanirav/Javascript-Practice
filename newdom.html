@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="user">Username:</label>
+        <input type="text" id="user">
+    
+        <br>
+        <br>
+    
+        <label for="pass">Password:</label>
+        <input type="password" id="pass">
+    
+        <br>
+        <br>
+    
+        <input type="button" id="submit" value="Submit" onclick="myFunction()">
+    </form>
+
+    <br>
+    <br>
+    <br>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+</body>
+
+<script>
+    function myFunction(){
+        var a = document.getElementById("user").value;
+        localStorage.setItem("Username",a);
+        document.getElementById("demo").innerHTML = localStorage.getItem("Username");
+        
+        var b = document.getElementById("pass").value;
+        localStorage.setItem("Password",b);
+        document.getElementById("demo2").innerHTML = localStorage.getItem("Password");
+    }
+    document.getElementById("demo").innerHTML = localStorage.getItem("Username");
+    document.getElementById("demo2").innerHTML = localStorage.getItem("Password");
+</script>
+        
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+    <style>
+        /* #count{
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(360deg,red,yellow);
+        } */
+    </style>
+</head>
+<body>
+    <button onclick="openWindow()">Open Window</button>
+    <button onclick="closeWindow()">Close Window</button>
+    <!-- <div id="count" onmousedown="fun()">
+    </div> -->
+</body>
+    <script>
+        function openWindow(){
+            myWindow = window.open('http://youtube.com','_parent','width=600px,height=600px,top=500px,left=600px');
+        };
+        function closeWindow(){
+            myWindow.close();
+        }
+    </script>
+</html>
